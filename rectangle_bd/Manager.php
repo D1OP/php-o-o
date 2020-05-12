@@ -1,4 +1,4 @@
-<?php
+s<?php
 abstract class Manager{
      //Chaine de Connexion
       protected  $pdo=null;//Connexion est fermée
@@ -9,7 +9,7 @@ abstract class Manager{
           if($this->pdo==null){
               $this->pdo = new PDO('mysql:host=localhost;dbname=gestion_figure','root','');
               //Activer les erreurs de PDO
-              $this->pdo ->setAttribute (PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+              //$this->pdo ->setAttribute (PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
               //Retourne les données d'une requete select sous la forme d'un tableau Associatif
               $this->pdo ->setAttribute (PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
           }

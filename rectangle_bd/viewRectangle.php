@@ -129,7 +129,7 @@
                    </thead>
                    <tbody>
                    <?php
-                      foreach ($_SESSION as $key => $rectangle) {
+                      foreach ($rectangles as $key => $rectangle) {
                           
                    ?>
                             <tr>

@@ -11,13 +11,13 @@ class CarreManager extends Manager{
 
 
      public function add($objet){
-         $sql="insert into  $this->tableName (longueur) values(".$objet->getLongueur().")";
-         
+         $sql="insert into  $this->tableName (longueur) values(".$objet->getLongueur().")"; 
         return  $this->executeUpdate( $sql)!=0;
 
      }
      public function update($objet){
-
+         $sql="update $this->tableName set longueur=".$objet->getLongueur()." where id=$id";
+         return  $this->executeUpdate( $sql)!=0;
      }
      public  function delete($id){
         $sql="delete from $this->tableName where id=$id";
@@ -28,6 +28,8 @@ class CarreManager extends Manager{
         return $this->executeSelect($sql);
      }
      public function findById($id){
+      $sql="select from  $this->tableName where id=$id";
+      return  $this->executeUpdate( $sql)!=0;
 
      }
 }

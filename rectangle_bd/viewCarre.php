@@ -1,5 +1,4 @@
-<?php
- 
+<?php 
  $manager=new CarreManager();
   if(isset($_POST['btn_submit'])){
     if($_POST['btn_submit']==="calcul"){
